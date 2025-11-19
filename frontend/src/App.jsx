@@ -7,8 +7,10 @@ import EditProfile from './components/EditProfile';
 import Search from './components/Search';
 import Messages from './components/Messages';
 import Jobs from './components/Jobs';
+import JobDetail from './components/JobDetail';
 import PostJob from './components/PostJob';
 import Funding from './components/Funding';
+import FundingDetail from './components/FundingDetail';
 import PostFunding from './components/PostFunding';
 import Feed from './components/Feed';
 import Admin from './components/Admin';
@@ -105,6 +107,14 @@ const AppRoutes = () => {
         }
       />
       <Route
+        path="/jobs/:id"
+        element={
+          <PrivateRoute>
+            <JobDetail />
+          </PrivateRoute>
+        }
+      />
+      <Route
         path="/jobs/post"
         element={
           <PrivateRoute>
@@ -117,6 +127,14 @@ const AppRoutes = () => {
         element={
           <PrivateRoute>
             <Funding />
+          </PrivateRoute>
+        }
+      />
+      <Route
+        path="/funding/:id"
+        element={
+          <PrivateRoute>
+            <FundingDetail />
           </PrivateRoute>
         }
       />

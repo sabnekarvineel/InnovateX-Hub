@@ -132,17 +132,30 @@ const Settings = () => {
     <div>
       <nav className="navbar">
         <div className="container">
-          <h1>TechConHub</h1>
+          <h1>InnovateX Hub</h1>
           <div className="navbar-actions">
-            <Link to="/feed" style={{ color: 'white', marginRight: '20px', textDecoration: 'none' }}>
-              Feed
-            </Link>
-            <Link to="/dashboard" style={{ color: 'white', marginRight: '20px', textDecoration: 'none' }}>
-              Dashboard
-            </Link>
-            <Link to={`/profile/${user?._id}`} style={{ color: 'white', marginRight: '20px', textDecoration: 'none' }}>
-              Profile
-            </Link>
+            {user?.role === 'admin' ? (
+              <>
+                <Link to="/admin" style={{ color: 'white', marginRight: '20px', textDecoration: 'none' }}>
+                  Admin
+                </Link>
+                <Link to="/settings" style={{ color: 'white', marginRight: '20px', textDecoration: 'none' }}>
+                  Settings
+                </Link>
+              </>
+            ) : (
+              <>
+                <Link to="/feed" style={{ color: 'white', marginRight: '20px', textDecoration: 'none' }}>
+                  Home
+                </Link>
+                <Link to="/dashboard" style={{ color: 'white', marginRight: '20px', textDecoration: 'none' }}>
+                  Dashboard
+                </Link>
+                <Link to={`/profile/${user?._id}`} style={{ color: 'white', marginRight: '20px', textDecoration: 'none' }}>
+                  Profile
+                </Link>
+              </>
+            )}
             <button onClick={logout} style={{ marginLeft: '10px' }}>Logout</button>
           </div>
         </div>

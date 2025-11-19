@@ -86,10 +86,11 @@ const Register = () => {
           <label>Role</label>
           <select name="role" value={role} onChange={onChange}>
             <option value="">Select your role</option>
-            <option value="student">Student</option>
-            <option value="freelancer">Freelancer</option>
-            <option value="startup">Startup</option>
-            <option value="investor">Investor</option>
+            <option value="student">👨‍🎓 Student</option>
+            <option value="freelancer">💼 Freelancer</option>
+            <option value="startup">🚀 Startup</option>
+            <option value="investor">💎 Investor</option>
+            <option value="admin">🛡️ Admin</option>
           </select>
         </div>
         <button type="submit" className="btn" disabled={loading}>

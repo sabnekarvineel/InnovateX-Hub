@@ -1,6 +1,6 @@
-# TechConHub - Authentication Module
+# InnovateX Hub - Full Stack Platform
 
-MERN stack application with authentication and role-based access.
+MERN stack application connecting students, freelancers, startups, and investors.
 
 ## Features
 
@@ -89,7 +89,7 @@ npm run dev
 ## Project Structure
 
 ```
-Techconhub/
+InnovateX-Hub/
 ├── backend/
 │   ├── config/
 │   │   └── db.js

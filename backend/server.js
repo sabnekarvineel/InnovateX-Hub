@@ -61,7 +61,7 @@ app.use('/api/admin', adminRoutes);
 app.use('/api/settings', settingsRoutes);
 
 app.get('/', (req, res) => {
-  res.json({ message: 'TechConHub API is running' });
+  res.json({ message: 'InnovateX Hub API is running' });
 });
 
 const PORT = process.env.PORT || 5000;
