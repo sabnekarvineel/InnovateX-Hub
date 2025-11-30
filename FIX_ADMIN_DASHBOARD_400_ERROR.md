@@ -5,7 +5,7 @@ Admin dashboard was showing blank with console error:
 ```
 Failed to load resource: the server responded with a status of 400 (Bad Request)
 api/dashboard/overview:1
-```
+```  
 
 ## Root Cause
 The main `Dashboard` component was calling `/api/dashboard/overview` for ALL users, including admins. However, the backend `dashboardController.js` only handles these roles:
@@ -20,7 +20,7 @@ default:
   return res.status(400).json({ message: 'Invalid user role' });
 ```
 
-## Solution
+## Solution  
 
 ### Frontend Fix
 Updated `frontend/src/components/Dashboard.jsx` to skip the `/api/dashboard/overview` call for admin users.
