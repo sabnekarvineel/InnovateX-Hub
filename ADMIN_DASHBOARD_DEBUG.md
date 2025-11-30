@@ -185,7 +185,7 @@ db.users.updateOne(
 
 - [ ] Can register as admin
 - [ ] Can login as admin
-- [ ] Dashboard shows loading state
+- [ ] Dashboard shows loading state    
 - [ ] Dashboard shows data (if API works)
 - [ ] Dashboard shows error (if API fails)
 - [ ] Console logs show data
