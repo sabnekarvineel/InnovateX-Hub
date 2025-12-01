@@ -42,7 +42,7 @@ const Funding = () => {
   return (
     <div className="funding-container">
       <div className="funding-header">
-        <h2>💰 Funding Opportunities</h2>
+        <h2> Funding Opportunities</h2>
         {user?.role === 'startup' && (
           <Link to="/funding/post" className="btn">
             Post Funding Request
